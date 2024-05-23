@@ -13,5 +13,18 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
     </div>
+    <div class="col-xs-12">
+      <h2>The Odd-Even Game!</h2>
+      <app-game-control (onNumberChanged)="onNewNumberReceived($event)"></app-game-control>
+    </div>
+    <div class="col-xs-12">
+      <div class="col-sm-6">
+        <app-odd *ngFor="let item of oddNums" [oddNumber]="item">
+        </app-odd>
+      </div>
+      <div class="col-sm-6">
+        <app-even *ngFor="let item of evenNums" [evenNumber]="item">
+        </app-even>
+      </div>
   </div>
 </div>
